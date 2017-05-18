@@ -1,4 +1,4 @@
-<div class="panel panel-primary">
+<div class="panel panel-danger">
      <div class="panel-heading">
           <h2 class="panel-title">{{ image.title }}</h2>
      </div>
@@ -6,16 +6,16 @@
           <div class="col-md-12 text-center">
                <img src="/public/upload/{{image.filename}}" class="img-thumbnail">
           </div>
-          <p>{{ image.description }}</p>
+          <p style="font-family: 'Comic Sans MS', cursive, sans-serif; display: inline">{{ image.description }}</p>
      </div>
      <div class="panel-footer">
           <div class="row">
                <div class="col-md-8">
                     <button class="btn btn-success" id="btn-like" data-id="{{ image.uniqueId }}">
-                         <i class="fa fa-heart">Like</i>
+                         <i class="fa fa-heart"><p style="font-family: 'Comic Sans MS', cursive, sans-serif; display: inline"> Like</p></i>
                     </button>
-                    <strong class="likes-count">{{ image.likes }}</strong>
-                    &nbsp; - &nbsp; Posted: <em class="text-muted">{{ timeago image.timestamp }}</em>
+                    <strong class="likes-count" style="font-family: 'Comic Sans MS', cursive, sans-serif;">{{ image.likes }}</strong>
+                    &nbsp; - &nbsp; <p style="font-family: 'Comic Sans MS', cursive, sans-serif; display: inline">Posted: </p><em class="text-muted" style="font-family: 'Comic Sans MS', cursive, sans-serif;">{{ timeago image.timestamp }}</em>
                </div>
             <div class="col-md-4 text-right">
                 <button class="btn btn-danger" id="btn-delete" data-id="{{ image.uniqueId }}">
@@ -30,11 +30,11 @@
      <div class="panel-heading">
           <div class="row">
                <div class="col-md-8">
-                    <strong class="panel-title">Comments</strong>
+                    <strong class="panel-title" style="font-family: 'Comic Sans MS', cursive, sans-serif;">Comments</strong>
                </div>
                <div class="col-md-4 text-right">
                     <button class="btn btn-default btn-sm" id="btn-comment" data-id="{{ image.uniqueId }}">
-                         <i class="fa fa-comments-o">Post Comment...</i>
+                         <i class="fa fa-comments-o"><p style="font-family: 'Comic Sans MS', cursive, sans-serif; display: inline"> Post Comment...</p></i>
                     </button>
                </div>
           </div>
