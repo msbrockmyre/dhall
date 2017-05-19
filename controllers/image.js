@@ -65,7 +65,8 @@ module.exports = {
                          var newImg = new Models.Image({
                                 title: req.body.title,
                                 filename: imgUrl + ext,
-                                description: req.body.description
+                                description: req.body.description,
+                                tags: req.body.tags
                             });
                             newImg.save(function(err, image) {
                                 console.log('Successfully inserted image: ' + image.filename);
