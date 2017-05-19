@@ -1,3 +1,9 @@
+<head>
+     <style>
+     .comic {font-family: 'Comic Sans MS', cursive, sans-serif;}
+     </style>
+</head>
+<body>
 <div class="panel panel-danger">
      <div class="panel-heading">
           <h2 class="panel-title">{{ image.title }}</h2>
@@ -6,16 +12,16 @@
           <div class="col-md-12 text-center">
                <img src="/public/upload/{{image.filename}}" class="img-thumbnail">
           </div>
-          <p style="font-family: 'Comic Sans MS', cursive, sans-serif; display: inline">{{ image.description }}</p>
+          <p class="comic">{{ image.description }}</p>
      </div>
      <div class="panel-footer">
           <div class="row">
                <div class="col-md-8">
                     <button class="btn btn-success" id="btn-like" data-id="{{ image.uniqueId }}">
-                         <i class="fa fa-heart"><p style="font-family: 'Comic Sans MS', cursive, sans-serif; display: inline"> Like</p></i>
+                         <i class="fa fa-heart"><p class="comic" style="display: inline"> Like</p></i>
                     </button>
-                    <strong class="likes-count" style="font-family: 'Comic Sans MS', cursive, sans-serif;">{{ image.likes }}</strong>
-                    &nbsp; - &nbsp; <p style="font-family: 'Comic Sans MS', cursive, sans-serif; display: inline">Posted: </p><em class="text-muted" style="font-family: 'Comic Sans MS', cursive, sans-serif;">{{ timeago image.timestamp }}</em>
+                    <strong class="likes-count comic">{{ image.likes }}</strong>
+                    &nbsp; - &nbsp; <p class="comic" style="display: inline">Posted: </p><em class="text-muted comic">{{ timeago image.timestamp }}</em>
                </div>
             <div class="col-md-4 text-right">
                 <button class="btn btn-danger" id="btn-delete" data-id="{{ image.uniqueId }}">
@@ -30,11 +36,11 @@
      <div class="panel-heading">
           <div class="row">
                <div class="col-md-8">
-                    <strong class="panel-title" style="font-family: 'Comic Sans MS', cursive, sans-serif;">Comments</strong>
+                    <strong class="panel-title comic">Comments</strong>
                </div>
                <div class="col-md-4 text-right">
                     <button class="btn btn-default btn-sm" id="btn-comment" data-id="{{ image.uniqueId }}">
-                         <i class="fa fa-comments-o"><p style="font-family: 'Comic Sans MS', cursive, sans-serif; display: inline"> Post Comment...</p></i>
+                         <i class="fa fa-comments-o"><p class="comic" style="display: inline"> Post Comment...</p></i>
                     </button>
                </div>
           </div>
@@ -44,26 +50,26 @@
                <div class="row">
                     <form method="post" action="/images/{{ image.uniqueId }}/comment">
                          <div class="form-group col-sm-12">
-                              <label class="col-sm-2 control-label" for="name">Name:</label>
+                              <label class="col-sm-2 control-label comic" for="name">Name:</label>
                               <div class="form-group col-sm-10">
                                    <input class="form-control" type="text" name="name">
                               </div>
                          </div>
                          <div class="form-group col-sm-12">
-                              <label class="col-sm-2 control-label" for="email">Email:</label>
+                              <label class="col-sm-2 control-label comic" for="email">Email:</label>
                               <div class="form-group col-sm-10">
                                    <input class="form-control" type="text" name="email">
                               </div>
                          </div>
                          <div class="form-group col-sm-12">
-                              <label class="col-sm-2 control-label" for="comment">Comment:</label>
+                              <label class="col-sm-2 control-label comic" for="comment">Comment:</label>
                               <div class="form-group col-sm-10">
                                    <textarea class="form-control" name="comment" rows="2"></textarea>
                               </div>
                          </div>
                          <div class="form-group col-md-12">
                               <div class="col-md-12 text-right">
-                                   <button type="submit" id="comment-btn" class="btn btn-success" type="button">
+                                   <button type="submit" id="comment-btn" class="btn btn-success comic" type="button">
                                         <i class="fa fa-comment"></i>
                                         Post
                                    </button>
@@ -89,3 +95,4 @@
           </ul>
      </div>
 </div>
+</body>
