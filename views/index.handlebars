@@ -1,6 +1,7 @@
 <head>
      <style>
-     .comic {font-family: 'Comic Sans MS', cursive, sans-serif;} </style>
+     .comic {font-family: 'Comic Sans MS', cursive, sans-serif;}
+     </style>
 </head>
 <body>
 <div class="panel panel-danger">
@@ -13,32 +14,32 @@
      <form method="post" action="/images" enctype="multipart/form-data">
           <div class="panel-body form-horizontal">
                <div class="form-group col-md-12">
-                    <label class="col-lg-4 control-label comic" for="file">
-                         Insert Photo or Video of Recipe:
+                    <label class="col-md-12 control-label comic" for="file">
+                         <p class="text-left">Insert Photo or Video of Recipe:</p>
                     </label>
                     <div class="col-md-12">
                          <input class="form-control" type="file" name="file" id="file">
                     </div>
                </div>
                <div class="form-group col-md-12">
-                    <label class="col-lg-2 control-label comic" for="title">
-                         Recipe Title:
+                    <label class="col-md-12 control-label comic" for="title">
+                         <p class="text-left">Recipe Title:</p>
                     </label>
                     <div class="col-md-12">
                          <input class="form-control" type="text" name="title">
                     </div>
                </div>
                <div class="form-group col-md-12">
-                    <label class="col-lg-3 control-label" for="description" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
-                         Recipe Instructions:
+                    <label class="col-md-12 control-label comic" for="description">
+                         <p class="text-left">Recipe Instructions:</p>
                     </label>
                     <div class="col-md-12">
                          <textarea class="form-control" name="description" rows="2"></textarea>
                     </div>
                </div>
                <div class="form-group col-md-12">
-                    <label class="col-md-5 control-label" for="tags" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
-                         Tags (separated by commas):
+                    <label class="col-md-12 control-label comic" for="tags">
+                         <p class="text-left">Tags (separated by commas):</p>
                     </label>
                     <div class="col-md-12">
                          <textarea class="form-control" name="tags" rows="1"></textarea>
@@ -46,7 +47,7 @@
                </div>
                <div class="form-group col-md-12">
                     <div class="col-md-12 text-right">
-                         <button type="submit" id="login-btn" class="btn btn-secondary" type="button" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
+                         <button type="submit" id="login-btn" class="btn btn-secondary comic" type="button">
                               <i class="fa fa-cloud-upload"></i>
                               Upload Recipe
                          </button>
