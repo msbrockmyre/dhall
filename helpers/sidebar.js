@@ -13,12 +13,16 @@ module.exports = function(viewModel, callback){
         },
         function(next) {
             Comments.newest(next);
+        },
+        function(next) {
+            Images.tags(next);
         }
     ], function(err, results){
         viewModel.sidebar = {
             stats: results[0],
             popular: results[1],
-            comments: results[2]
+            comments: results[2],
+            tags: results[3]
         };
 
         callback(viewModel);

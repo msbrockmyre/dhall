@@ -8,5 +8,13 @@ module.exports = {
 
                 callback(null, images);
             });
+     },
+     tags: function(callback){
+          models.Image.find({tags: "dessert"},
+               function(err, images) {
+                    if (err) throw err;
+                    
+                    callback(null, images);
+               });
      }
 };
