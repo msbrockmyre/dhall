@@ -83,9 +83,11 @@ module.exports = {
            //
                 }
           });
+          
         };
-
+          
         saveImage();
+        
     },
      like: function(req, res) {
         Models.Image.findOne({ filename: { $regex: req.params.image_id } },
