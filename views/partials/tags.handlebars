@@ -15,5 +15,15 @@
             <div class="col-md-4 text-left" style="padding-bottom: .5em;"><a href="/images/{{uniqueId}}"><img src="/public/upload/{{filename}}" style="width: 75px; height: 75px;" class="img-thumbnail"></a></div>
         {{/each}}
         
+        <p class="panel-body" style="font-family: 'Comic Sans MS', cursive, sans-serif; width: 100%; float: left;">Lunch</p>
+        {{#each sidebar.lunch}}
+            <div class="col-md-4 text-left" style="padding-bottom: .5em;"><a href="/images/{{uniqueId}}"><img src="/public/upload/{{filename}}" style="width: 75px; height: 75px;" class="img-thumbnail"></a></div>
+        {{/each}}
+        
+        <p class="panel-body" style="font-family: 'Comic Sans MS', cursive, sans-serif; width: 100%; float: left;">Dinner</p>
+        {{#each sidebar.dinner}}
+            <div class="col-md-4 text-left" style="padding-bottom: .5em;"><a href="/images/{{uniqueId}}"><img src="/public/upload/{{filename}}" style="width: 75px; height: 75px;" class="img-thumbnail"></a></div>
+        {{/each}}
+        
     </div>
 </div>

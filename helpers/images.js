@@ -24,5 +24,21 @@ module.exports = {
                     
                     callback(null, images);
                });
+     },
+     lunch: function(callback){
+          models.Image.find({tags: "lunch"},
+               function(err, images) {
+                    if (err) throw err;
+                    
+                    callback(null, images);
+               });
+     },
+     dinner: function(callback){
+          models.Image.find({tags: "dinner"},
+               function(err, images) {
+                    if (err) throw err;
+                    
+                    callback(null, images);
+               });
      }
 };
