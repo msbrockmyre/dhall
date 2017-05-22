@@ -16,13 +16,17 @@ module.exports = function(viewModel, callback){
         },
         function(next) {
             Images.tags(next);
+        },
+        function(next) {
+            Images.breakfast(next);
         }
     ], function(err, results){
         viewModel.sidebar = {
             stats: results[0],
             popular: results[1],
             comments: results[2],
-            tags: results[3]
+            tags: results[3],
+            breakfast: results[4]
         };
 
         callback(viewModel);

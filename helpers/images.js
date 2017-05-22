@@ -16,5 +16,13 @@ module.exports = {
                     
                     callback(null, images);
                });
+     },
+     breakfast: function(callback){
+          models.Image.find({tags: "breakfast"},
+               function(err, images) {
+                    if (err) throw err;
+                    
+                    callback(null, images);
+               });
      }
 };
