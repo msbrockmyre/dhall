@@ -16,5 +16,5 @@ ImageSchema.virtual('uniqueId')
     .get(function() {
         return this.filename.replace(path.extname(this.filename), '');
     });
-
+ImageSchema.index({ tags: "text"});
 module.exports = mongoose.model('Image', ImageSchema);

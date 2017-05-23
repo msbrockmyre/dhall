@@ -10,8 +10,8 @@ module.exports = {
             });
      },
      tags: function(callback){
-          //models.createIndex({tags: "text"},
-          models.Image.find(/*{ $text: { $search: "dessert"}}*/ {tags: "dessert"},
+          
+          models.Image.find({ $text: { $search: "dessert"}},
                function(err, images) {
                     if (err) throw err;
                     
