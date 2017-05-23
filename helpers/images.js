@@ -19,7 +19,7 @@ module.exports = {
                });
      },
      breakfast: function(callback){
-          models.Image.find({tags: "breakfast"},
+          models.Image.find({ $text: { $search: "breakfast"}},
                function(err, images) {
                     if (err) throw err;
                     
@@ -27,7 +27,7 @@ module.exports = {
                });
      },
      lunch: function(callback){
-          models.Image.find({tags: "lunch"},
+          models.Image.find({ $text: { $search: "lunch"}},
                function(err, images) {
                     if (err) throw err;
                     
@@ -35,7 +35,7 @@ module.exports = {
                });
      },
      dinner: function(callback){
-          models.Image.find({tags: "dinner"},
+          models.Image.find({ $text: { $search: "dinner"}},
                function(err, images) {
                     if (err) throw err;
                     
