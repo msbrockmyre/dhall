@@ -4,8 +4,58 @@
      </style>
 </head>
 <body>
+     <div class="panel panel-success">
+     <div class="panel-heading">
+          <h3 class="panel-title comic" onclick="hide();" id="upload_button">
+               <a href="#">Upload a Recipe</a>
+          </h3>
+     </div>
 
-
+     <form method="post" action="/images" enctype="multipart/form-data" id="upload_form" style="display:none">
+          <div class="panel-body form-horizontal">
+               <div class="form-group col-md-12">
+                    <label class="col-md-12 control-label comic" for="file">
+                         <p class="text-left">Insert Photo or Video of Recipe:</p>
+                    </label>
+                    <div class="col-md-12">
+                         <input class="form-control" type="file" name="file" id="file">
+                    </div>
+               </div>
+               <div class="form-group col-md-12">
+                    <label class="col-md-12 control-label comic" for="title">
+                         <p class="text-left">Recipe Title:</p>
+                    </label>
+                    <div class="col-md-12">
+                         <input class="form-control" type="text" name="title">
+                    </div>
+               </div>
+               <div class="form-group col-md-12">
+                    <label class="col-md-12 control-label comic" for="description">
+                         <p class="text-left">Recipe Instructions:</p>
+                    </label>
+                    <div class="col-md-12">
+                         <textarea class="form-control" name="description" rows="2"></textarea>
+                    </div>
+               </div>
+               <div class="form-group col-md-12">
+                    <label class="col-md-12 control-label comic" for="tags">
+                         <p class="text-left">Tags (separated by commas):</p>
+                    </label>
+                    <div class="col-md-12">
+                         <textarea class="form-control" name="tags" rows="1"></textarea>
+                    </div>
+               </div>
+               <div class="form-group col-md-12">
+                    <div class="col-md-12 text-right">
+                         <button type="submit" id="login-btn" class="btn btn-secondary comic" type="button">
+                              <i class="fa fa-cloud-upload"></i>
+                              Upload Recipe
+                         </button>
+                    </div>
+               </div>
+          </div>
+     </form>
+</div>
 <div class="panel panel-danger">
      <div class="panel-heading">
           <h3 class="panel-title" style="font-family: 'Comic Sans MS', cursive, sans-serif;">
@@ -23,3 +73,13 @@
      </div>
 </div>
 </body>
+<script>
+    function hide() {
+        var x = document.getElementById('upload_form');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+    }
+</script>
