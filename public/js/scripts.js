@@ -24,7 +24,8 @@ $(function(){
 
             $.ajax({
                 url: '/images/' + imgId,
-                type: 'DELETE'
+                type: 'POST',
+                data: {_method: "delete"}
             }).done(function(result) {
                 if (result) {
                     $this.removeClass('btn-danger').addClass('btn-success');
