@@ -12,20 +12,19 @@ $(function(){
                $('.likes-count').text(data.likes);
           });
      });
- $('#btn-delete').on('click', function(event) {
+$('#btn-delete').on('click', function(event) {
         event.preventDefault();
-
+ 
         var $this = $(this);
-
+ 
         var remove = confirm('Are you sure you want to delete this image?');
         if (remove) {
-
+ 
             var imgId = $(this).data('id');
-
+ 
             $.ajax({
                 url: '/images/' + imgId,
-                type: 'POST',
-                data: {_method: "delete"}
+                type: 'DELETE'
             }).done(function(result) {
                 if (result) {
                     $this.removeClass('btn-danger').addClass('btn-success');
@@ -36,3 +35,4 @@ $(function(){
         }
     });
 });
+ 
