@@ -19,7 +19,6 @@ $('#btn-delete').on('click', function(event) {
  
         var remove = confirm('Are you sure you want to delete this image?');
         if (remove) {
- 
             var imgId = $(this).data('id');
  
             $.ajax({
@@ -33,6 +32,9 @@ $('#btn-delete').on('click', function(event) {
                 }
             });
         }
+        
+        location.reload();
+        
     });
 });
  
